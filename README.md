@@ -194,12 +194,92 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 
 ## 7. ⚠️ Risk Assessment
 
-### Risk Identification
-- **Technical Risk**: Hệ thống không hoạt động như mong đợi khi tích hợp Rekognition.
-- **Business Risk**: Khách hàng không sẵn sàng chấp nhận công nghệ mới.
+### Risk Identification (Technical, Business, Operational)
+1. **Technical Risks**:
+   - **Hệ thống không hoạt động như mong đợi khi tích hợp Rekognition**: Có thể gặp phải các vấn đề khi kết nối các dịch vụ AWS, đặc biệt khi sử dụng Rekognition để phân tích ảnh.
+   - **Hiệu suất Lambda không đáp ứng yêu cầu**: Lambda có thể gặp vấn đề khi có quá nhiều yêu cầu đồng thời, ảnh hưởng đến thời gian phản hồi.
 
-### Mitigation Strategies
-- Phát triển bộ công cụ kiểm thử đầy đủ và liên tục theo dõi hiệu suất hệ thống.
+2. **Business Risks**:
+   - **Khách hàng không chấp nhận công nghệ mới**: Doanh nghiệp có thể không sẵn sàng thay đổi quy trình hiện tại và áp dụng công nghệ AI mới.
+   - **Không đáp ứng được yêu cầu về tính bảo mật và quyền riêng tư**: Nếu hệ thống không tuân thủ các tiêu chuẩn bảo mật và quyền riêng tư, có thể gây mất lòng tin và ảnh hưởng đến doanh thu.
+
+3. **Operational Risks**:
+   - **Quá tải khi có quá nhiều yêu cầu đồng thời**: Khi có nhiều người dùng sử dụng hệ thống cùng lúc, có thể dẫn đến quá tải, làm giảm hiệu suất hệ thống.
+   - **Sự cố trong việc xử lý dữ liệu và bảo mật**: Nếu không được quản lý đúng cách, dữ liệu có thể bị rò rỉ hoặc bị thao túng, ảnh hưởng đến uy tín và hoạt động của hệ thống.
+
+### Impact Assessment và Probability Analysis
+- **Technical Risks**:
+  - **Hệ thống không hoạt động như mong đợi khi tích hợp Rekognition**:
+    - **Impact**: Cao, vì sẽ ảnh hưởng trực tiếp đến tính năng chính của hệ thống (nhận diện ảnh).
+    - **Probability**: Thấp, vì Rekognition được hỗ trợ tốt và đã được kiểm chứng.
+  
+  - **Hiệu suất Lambda không đáp ứng yêu cầu**:
+    - **Impact**: Trung bình, nếu không xử lý kịp thời sẽ làm giảm hiệu suất hệ thống.
+    - **Probability**: Trung bình, đặc biệt nếu có sự gia tăng lượng người dùng.
+
+- **Business Risks**:
+  - **Khách hàng không chấp nhận công nghệ mới**:
+    - **Impact**: Cao, vì có thể ảnh hưởng đến khả năng triển khai hệ thống và mở rộng thị trường.
+    - **Probability**: Trung bình, vì có thể cần một thời gian để khách hàng làm quen với công nghệ mới.
+
+  - **Không đáp ứng yêu cầu về bảo mật và quyền riêng tư**:
+    - **Impact**: Cao, ảnh hưởng lớn đến sự tin tưởng của khách hàng.
+    - **Probability**: Thấp, vì AWS đã cung cấp các công cụ bảo mật mạnh mẽ.
+
+- **Operational Risks**:
+  - **Quá tải khi có quá nhiều yêu cầu đồng thời**:
+    - **Impact**: Cao, ảnh hưởng đến trải nghiệm người dùng.
+    - **Probability**: Trung bình, đặc biệt nếu không có biện pháp mở rộng phù hợp.
+
+  - **Sự cố trong việc xử lý dữ liệu và bảo mật**:
+    - **Impact**: Rất cao, có thể dẫn đến việc mất dữ liệu hoặc vi phạm bảo mật.
+    - **Probability**: Thấp, nếu hệ thống được cấu hình đúng cách.
+
+### Risk Matrix với Prioritization
+| Risk Type               | Impact | Probability | Mitigation Strategy                          |
+|-------------------------|--------|-------------|----------------------------------------------|
+| **Technical Risk**       |        |             |                                              |
+| Hệ thống không hoạt động khi tích hợp Rekognition | High   | Low         | Kiểm thử trước khi triển khai, sử dụng Rekognition SDK chính thức |
+| Hiệu suất Lambda không đáp ứng yêu cầu | Medium | Medium      | Sử dụng AWS Lambda với cấu hình tối ưu, theo dõi hiệu suất qua CloudWatch |
+| **Business Risk**        |        |             |                                              |
+| Khách hàng không chấp nhận công nghệ mới | High   | Medium      | Cung cấp đào tạo và tài liệu giải thích về lợi ích của AI |
+| Không đáp ứng yêu cầu bảo mật và quyền riêng tư | High   | Low         | Sử dụng các công cụ bảo mật AWS như IAM, VPC, và mã hóa dữ liệu |
+| **Operational Risk**     |        |             |                                              |
+| Quá tải khi có quá nhiều yêu cầu | High   | Medium      | Sử dụng Auto-scaling và thiết lập cân bằng tải với AWS Lambda |
+| Sự cố trong việc xử lý dữ liệu và bảo mật | High   | Low         | Đảm bảo tuân thủ các quy trình bảo mật và thực hiện sao lưu thường xuyên |
+
+### Mitigation Strategies cho Each Risk
+- **Hệ thống không hoạt động khi tích hợp Rekognition**:
+  - Kiểm tra và thử nghiệm tích hợp Rekognition trong môi trường phát triển trước khi triển khai vào sản xuất.
+  - Sử dụng các API chính thức và tài liệu của AWS để đảm bảo tính tương thích.
+
+- **Hiệu suất Lambda không đáp ứng yêu cầu**:
+  - Cấu hình tối ưu cho các hàm Lambda để tránh các vấn đề về hiệu suất khi có quá nhiều yêu cầu đồng thời.
+  - Sử dụng AWS CloudWatch để theo dõi và điều chỉnh cấu hình Lambda theo nhu cầu thực tế.
+
+- **Khách hàng không chấp nhận công nghệ mới**:
+  - Tổ chức các buổi đào tạo cho khách hàng để họ hiểu rõ lợi ích của công nghệ AI.
+  - Cung cấp tài liệu chi tiết và hỗ trợ kỹ thuật khi khách hàng triển khai.
+
+- **Không đáp ứng yêu cầu bảo mật và quyền riêng tư**:
+  - Đảm bảo hệ thống tuân thủ các quy chuẩn bảo mật quốc tế như GDPR, HIPAA.
+  - Cấu hình AWS IAM đúng cách để kiểm soát quyền truy cập vào dữ liệu.
+
+- **Quá tải khi có quá nhiều yêu cầu đồng thời**:
+  - Sử dụng tính năng Auto-scaling của AWS Lambda để hệ thống tự động mở rộng khi cần thiết.
+  - Sử dụng AWS API Gateway để phân phối tải cho các API.
+
+- **Sự cố trong việc xử lý dữ liệu và bảo mật**:
+  - Sử dụng dịch vụ sao lưu dữ liệu tự động của AWS và thực hiện các biện pháp bảo mật như mã hóa dữ liệu.
+
+### Contingency Plans
+- **Technical Risks**: Nếu hệ thống gặp sự cố tích hợp, chúng ta sẽ có kế hoạch quay lại phiên bản trước đó và làm việc với đội ngũ AWS support để khắc phục.
+- **Business Risks**: Nếu khách hàng không chấp nhận công nghệ, sẽ cung cấp thêm tài liệu và hỗ trợ để khách hàng hiểu rõ giá trị của AI. Nếu không thể triển khai, sẽ xem xét điều chỉnh công nghệ phù hợp với yêu cầu của khách hàng.
+- **Operational Risks**: Trong trường hợp hệ thống quá tải, sẽ tạm thời tăng cường tài nguyên (ví dụ, tăng số lượng phiên bản Lambda) hoặc áp dụng biện pháp giảm tải.
+
+### Monitoring và Escalation Procedures
+- **Monitoring**: Sử dụng AWS CloudWatch để giám sát hiệu suất và lỗi hệ thống. Đặt ngưỡng cảnh báo khi có lỗi hệ thống.
+- **Escalation Procedures**: Nếu có sự cố lớn xảy ra, sẽ thông báo ngay cho người quản lý dự án và nhóm hỗ trợ kỹ thuật AWS để xử lý nhanh chóng.
 
 ## 8. 🎯 Expected Outcomes
 
