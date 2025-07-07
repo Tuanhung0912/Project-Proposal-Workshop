@@ -117,7 +117,7 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ### Key Milestones và Success Criteria
 - **Milestone 1**: Hoàn thành thiết kế hệ thống và lựa chọn các dịch vụ AWS.
 - **Milestone 2**: Hoàn thành phát triển Lambda và tích hợp Rekognition.
-- **Milestone 3**: Kiểm thử và triển khai hệ thống vào môi trường sản xuất.
+- **Milestone 3**: Kiểm thử và triển khai hệ thống.
 
 ## 6. 💰 Budget Estimation
 
