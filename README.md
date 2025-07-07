@@ -50,7 +50,7 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ## 3. 🏗️ Solution Architecture
 
 ### High-level Architecture Diagram
-![Solution Architecture Diagram](/images/main_model.png)
+![Solution Architecture Diagram](/images/main_model_light.png)
 
 ### AWS Services Selection và Justification
 - **Amazon Rekognition**: Dịch vụ nhận diện ảnh mạnh mẽ từ AWS, miễn phí trong giới hạn 5,000 ảnh mỗi tháng.
