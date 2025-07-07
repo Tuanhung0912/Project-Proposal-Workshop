@@ -1,5 +1,12 @@
 # Proposal: AI Nhận Diện Ảnh Thông Minh với Amazon Rekognition và Serverless Stack
 
+# Thông Tin Sinh Viên Thực Tập
+
+- **Họ và Tên**: Đinh Lê Tuấn Hưng
+- **MSSV**: 20180201
+- **Gmail**: dinhlethanhhung@example.com
+- **Github**: [https://github.com/dinhletuanhung](https://github.com/dinhletuanhung)
+- **Link Workshop**: [Link Workshop AI Nhận Diện Ảnh Thông Minh với Amazon Rekognition và Serverless Stack](https://example.com/workshop-link)
 
 ## 1. Executive Summary
 
