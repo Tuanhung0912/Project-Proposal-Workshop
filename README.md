@@ -2,13 +2,13 @@
 
 # Thông Tin Sinh Viên Thực Tập
 
-- **Họ và Tên**: Đinh Lê Tuấn Hưng
-- **MSSV**: 2180600557
-- **Gmail**: tuanhung.bh2003@gmail.com
-- **Github**: [https://github.com/Tuanhung0912](https://github.com/Tuanhung0912)
-- **Link Workshop**: [https://tuanhung0912.github.io/](https://tuanhung0912.github.io/)
+-  👨‍🎓 **Họ và Tên**: Đinh Lê Tuấn Hưng
+-  🆔 **MSSV**: 2180600557
+-  📧 **Gmail**: tuanhung.bh2003@gmail.com
+-  🐱 **Github**: [https://github.com/Tuanhung0912](https://github.com/Tuanhung0912)
+-  🔗 **Link Workshop**: [https://tuanhung0912.github.io/](https://tuanhung0912.github.io/)
 
-## 1. Executive Summary
+## 1. 📄 Executive Summary
 
 ### Problem Statement
 Hiện nay, việc phân tích và nhận diện ảnh thủ công trong các doanh nghiệp gặp phải nhiều vấn đề như mất thời gian, chi phí cao và độ chính xác không ổn định. Điều này đặc biệt quan trọng trong các ngành như an ninh, bán lẻ, y tế, nơi cần xử lý lượng lớn dữ liệu hình ảnh nhanh chóng và chính xác.
@@ -28,7 +28,7 @@ Workshop này sẽ triển khai hệ thống AI nhận diện ảnh thông minh 
 - **Success Metrics**: Thời gian phản hồi hệ thống dưới 5 giây, độ chính xác nhận diện ảnh đạt 95%.
 - **Expected Outcomes**: Cải thiện hiệu quả công việc và giảm thiểu sai sót trong phân tích ảnh.
 
-## 2. Problem Statement
+## 2. 🎯 Problem Statement
 
 ### Current Situation Analysis
 Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công hoặc các công cụ không hiệu quả để phân tích hình ảnh, gây lãng phí thời gian và chi phí.
@@ -47,7 +47,7 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ### Market Opportunity
 - Thị trường AI nhận diện ảnh đang phát triển mạnh mẽ, đặc biệt trong các lĩnh vực như bán lẻ, y tế và an ninh.
 
-## 3. Solution Architecture
+## 3. 🏗️ Solution Architecture
 
 ### High-level Architecture Diagram
 ![Solution Architecture Diagram](https://path_to_image.png)
@@ -80,7 +80,7 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ### Integration Points với Existing Systems
 - Hệ thống có thể dễ dàng tích hợp với các hệ thống quản lý khách hàng hiện có hoặc các ứng dụng dữ liệu khác.
 
-## 4. Technical Implementation
+## 4. 🔧 Technical Implementation
 
 ### Implementation Phases và Deliverables
 1. **Giai đoạn 1**: Thiết kế hệ thống và lựa chọn dịch vụ AWS (2 tuần)
@@ -107,19 +107,19 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ### Configuration Management
 - Sử dụng Git và AWS CloudFormation để quản lý cấu hình.
 
-## 5. Timeline & Milestones
+## 5. 📅 Timeline & Milestones
 
 ### Project Phases Breakdown
-1. **Thiết kế hệ thống**: 2 tuần
-2. **Phát triển và triển khai**: 4 tuần
-3. **Kiểm thử và triển khai**: 4 tuần
+1. **Thiết kế hệ thống**: 1 tuần
+2. **Phát triển và triển khai**: 1 tuần
+3. **Kiểm thử và triển khai**: 1 tuần
 
 ### Key Milestones và Success Criteria
 - **Milestone 1**: Hoàn thành thiết kế hệ thống và lựa chọn các dịch vụ AWS.
 - **Milestone 2**: Hoàn thành phát triển Lambda và tích hợp Rekognition.
 - **Milestone 3**: Kiểm thử và triển khai hệ thống vào môi trường sản xuất.
 
-## 6. Budget Estimation
+## 6. 💰 Budget Estimation
 
 ### AWS Infrastructure Costs
 - **Monthly**: Dự kiến miễn phí trong phạm vi AWS Free Tier, bao gồm:
@@ -133,7 +133,7 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ### Operational Costs
 - **Ongoing**: Chi phí AWS sẽ chỉ phát sinh nếu vượt quá giới hạn miễn phí của AWS Free Tier.
 
-## 7. Risk Assessment
+## 7. ⚠️ Risk Assessment
 
 ### Risk Identification
 - **Technical Risk**: Hệ thống không hoạt động như mong đợi khi tích hợp Rekognition.
@@ -142,7 +142,7 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ### Mitigation Strategies
 - Phát triển bộ công cụ kiểm thử đầy đủ và liên tục theo dõi hiệu suất hệ thống.
 
-## 8. Expected Outcomes
+## 8. 🎯 Expected Outcomes
 
 ### Success Metrics
 - **Technical**: Thời gian phản hồi dưới 5 giây, độ chính xác nhận diện đạt 95%.
