@@ -151,17 +151,46 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 
 ## 6. 💰 Budget Estimation
 
-### AWS Infrastructure Costs
+### AWS Infrastructure Costs (Monthly/Annual)
 - **Monthly**: Dự kiến miễn phí trong phạm vi AWS Free Tier, bao gồm:
   - **Amazon Rekognition**: Miễn phí 5,000 ảnh phân tích mỗi tháng.
   - **AWS Lambda**: Miễn phí 1 triệu lượt gọi mỗi tháng.
   - **Amazon S3**: Miễn phí 5GB bộ nhớ lưu trữ và 20,000 lượt truy xuất mỗi tháng.
+  - **AWS API Gateway**: Miễn phí 1 triệu yêu cầu mỗi tháng.
+  - **AWS CloudWatch**: Miễn phí 5GB lưu trữ logs và 5GB dữ liệu gửi đi mỗi tháng.
 
-### Development Costs
-- **One-time**: Chi phí phát triển hệ thống, không có chi phí ngoài AWS Free Tier.
+- **Annually**: Các chi phí hàng năm sẽ tương tự như các chi phí hàng tháng và sẽ phát sinh nếu vượt quá các giới hạn miễn phí. 
 
-### Operational Costs
-- **Ongoing**: Chi phí AWS sẽ chỉ phát sinh nếu vượt quá giới hạn miễn phí của AWS Free Tier.
+### Development Costs (One-time)
+- **Chi phí nhân sự**: Dự án yêu cầu một sinh viên thực tập tham gia phát triển trong 3 tháng. Giả sử mỗi giờ công là $5, với tổng thời gian làm việc là 480 giờ (3 tháng x 160 giờ/tháng), chi phí nhân sự sẽ là:
+  - **Chi phí nhân sự**: $5 * 480 = $2,400
+- **Công cụ phát triển**: Không có chi phí phần mềm hoặc phần cứng phát sinh ngoài các dịch vụ AWS Free Tier. Các công cụ như Git, CloudFormation, AWS Console, và các IDE (VSCode, GitHub) đều miễn phí sử dụng.
+
+### Third-party Services và Licenses
+- **Third-party Services**: Trong phạm vi của dự án này, không yêu cầu bất kỳ dịch vụ bên ngoài nào ngoài AWS.
+- **Licenses**: Không có phí cấp phép phát sinh, vì tất cả các dịch vụ AWS được sử dụng đều nằm trong phạm vi AWS Free Tier hoặc được tính phí theo mức độ sử dụng.
+
+### Operational Costs (Ongoing)
+- **Chi phí AWS hàng tháng**: 
+  - **Amazon Rekognition**: Sau khi vượt quá 5,000 ảnh miễn phí, chi phí là $1.00 mỗi 1,000 ảnh.
+  - **AWS Lambda**: Sau khi vượt qua 1 triệu lượt gọi miễn phí, chi phí là $0.20 mỗi triệu lượt gọi.
+  - **Amazon S3**: Sau khi vượt qua 5GB bộ nhớ lưu trữ miễn phí, chi phí là $0.023 mỗi GB/tháng.
+  - **AWS API Gateway**: Sau khi vượt qua 1 triệu yêu cầu miễn phí, chi phí là $3.50 mỗi triệu yêu cầu.
+  - **AWS CloudWatch**: Sau khi vượt qua 5GB logs miễn phí, chi phí là $0.03 mỗi GB.
+
+### ROI Calculation và Break-even Analysis
+- **ROI (Return on Investment)**: Mặc dù dự án sử dụng AWS Free Tier trong giai đoạn thử nghiệm, chi phí có thể phát sinh khi vượt qua các giới hạn miễn phí. ROI dự kiến sẽ đạt 25% trong vòng 6 tháng, vì hệ thống sẽ tiết kiệm được chi phí nhân sự và thời gian khi tự động hóa quy trình nhận diện ảnh.
+  
+- **Break-even Analysis**: 
+  - Điểm hòa vốn dự kiến sẽ không xảy ra trong 6 tháng đầu do sử dụng AWS Free Tier. Sau khi vượt qua giới hạn miễn phí của AWS, chi phí sẽ bắt đầu phát sinh. 
+  - Dự kiến break-even point có thể đạt được trong khoảng 12 tháng nếu hệ thống được mở rộng và sử dụng tối đa các tính năng tự động của AWS.
+
+### Cost Optimization Strategies
+- **Tận dụng AWS Free Tier**: Cố gắng giữ mức sử dụng các dịch vụ trong phạm vi miễn phí của AWS.
+- **Auto-scaling**: Sử dụng tính năng tự động mở rộng của AWS Lambda và S3 để giảm thiểu chi phí khi không có tải cao.
+- **Sử dụng CloudWatch**: Theo dõi chi tiết mức độ sử dụng các dịch vụ AWS để đảm bảo không vượt quá giới hạn miễn phí mà không cần thiết.
+- **Reserved Instances (RI)**: Xem xét sử dụng **Reserved Instances** nếu hệ thống có nhu cầu sử dụng lâu dài, để nhận chiết khấu và giảm chi phí.
+- **Sử dụng Layered Architecture**: Tối ưu kiến trúc bằng cách chỉ kích hoạt các tài nguyên cần thiết trong các tình huống cụ thể, giảm bớt việc sử dụng các tài nguyên tính phí liên tục.
 
 ## 7. ⚠️ Risk Assessment
 
