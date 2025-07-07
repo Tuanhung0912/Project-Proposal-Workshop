@@ -110,14 +110,44 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ## 5. 📅 Timeline & Milestones
 
 ### Project Phases Breakdown
-1. **Thiết kế hệ thống**: 1 tuần
-2. **Phát triển và triển khai**: 1 tuần
-3. **Kiểm thử và triển khai**: 1 tuần
+1. **Giai đoạn 1: Thiết kế và lập kế hoạch** (1 tuần)
+   - **Mục tiêu**: Thiết kế tổng quan hệ thống và lựa chọn các dịch vụ AWS.
+   - **Deliverables**: Phác thảo kiến trúc hệ thống, danh sách các dịch vụ AWS cần sử dụng.
+   
+2. **Giai đoạn 2: Phát triển và triển khai** (1 tuần)
+   - **Mục tiêu**: Phát triển các hàm Lambda, cấu hình Amazon Rekognition và kết nối với S3.
+   - **Deliverables**: Mã nguồn Lambda, cấu hình Rekognition, S3 bucket để lưu trữ ảnh và kết quả phân tích.
+
+3. **Giai đoạn 3: Kiểm thử và triển khai** (1 tuần)
+   - **Mục tiêu**: Kiểm thử hệ thống và triển khai vào môi trường sản xuất.
+   - **Deliverables**: Kiểm thử toàn bộ hệ thống, từ việc tải ảnh lên cho đến trả kết quả phân tích, và triển khai hệ thống lên AWS.
 
 ### Key Milestones và Success Criteria
 - **Milestone 1**: Hoàn thành thiết kế hệ thống và lựa chọn các dịch vụ AWS.
+   - **Success Criteria**: Hoàn thành kiến trúc hệ thống với các dịch vụ AWS đã chọn, bao gồm IAM, Lambda, Rekognition, S3, và API Gateway.
+   - **Ngày hoàn thành dự kiến**: Ngày 7 sau khi bắt đầu dự án.
+
 - **Milestone 2**: Hoàn thành phát triển Lambda và tích hợp Rekognition.
-- **Milestone 3**: Kiểm thử và triển khai hệ thống.
+   - **Success Criteria**: Lambda function có thể kích hoạt thành công và sử dụng Rekognition để phân tích ảnh. Kết quả sẽ được trả về đúng định dạng JSON và lưu trữ trên S3.
+   - **Ngày hoàn thành dự kiến**: Ngày 14 sau khi bắt đầu dự án.
+
+- **Milestone 3**: Kiểm thử và triển khai hệ thống vào môi trường sản xuất.
+   - **Success Criteria**: Hệ thống hoạt động ổn định trong môi trường sản xuất, với thời gian phản hồi dưới 5 giây và độ chính xác nhận diện ảnh đạt 95%.
+   - **Ngày hoàn thành dự kiến**: Ngày 21 sau khi bắt đầu dự án.
+
+### Dependencies Identification
+- **Phụ thuộc vào các dịch vụ AWS**: Đảm bảo các dịch vụ như Lambda, Rekognition, API Gateway và S3 đã được cấu hình và hoạt động đúng.
+- **Phụ thuộc vào môi trường phát triển**: Các công cụ phát triển như Git, AWS SDK phải được cài đặt và cấu hình trước khi bắt đầu phát triển.
+
+### Critical Path Analysis
+- Các bước kiểm thử và tích hợp hệ thống có thể là điểm nghẽn, cần đảm bảo có đủ thời gian và tài nguyên cho các giai đoạn này. Nếu giai đoạn phát triển hoặc tích hợp gặp sự cố, sẽ ảnh hưởng đến tiến độ của các giai đoạn sau.
+
+### Resource Allocation Plan
+- **Nhân lực**: 1 sinh viên thực tập, 1 người hướng dẫn.
+- **Công cụ**: AWS Console, Git, CloudFormation, Lambda, API Gateway.
+
+### Buffer Time cho Risks
+- Thêm 2 ngày cho các rủi ro phát sinh trong giai đoạn kiểm thử và triển khai.
 
 ## 6. 💰 Budget Estimation
 
