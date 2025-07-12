@@ -84,9 +84,9 @@ Hiện tại, nhiều doanh nghiệp sử dụng các phương pháp thủ công
 ## 4. 🔧 Technical Implementation
 
 ### Implementation Phases và Deliverables
-1. **Giai đoạn 1**: Thiết kế hệ thống và lựa chọn dịch vụ AWS (2 tuần)
-2. **Giai đoạn 2**: Phát triển và triển khai Lambda functions, cấu hình Rekognition (4 tuần)
-3. **Giai đoạn 3**: Kiểm thử và triển khai toàn hệ thống (4 tuần)
+1. **Giai đoạn 1**: Thiết kế hệ thống và lựa chọn dịch vụ AWS (1 tuần)
+2. **Giai đoạn 2**: Phát triển và triển khai Lambda functions, cấu hình Rekognition (1 tuần)
+3. **Giai đoạn 3**: Kiểm thử và triển khai toàn hệ thống (1 tuần)
 
 ### Technical Requirements
 - **Compute**: AWS Lambda (miễn phí 1 triệu lượt gọi mỗi tháng)
