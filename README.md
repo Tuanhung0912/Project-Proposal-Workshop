@@ -3,8 +3,6 @@
 # Thông Tin Sinh Viên Thực Tập
 
 -  👨‍🎓 **Họ và Tên**: Đinh Lê Tuấn Hưng
--  👨‍🎓 **Trường Đại Học**: Đại Học công Nghệ TP.HCM (HUTECH)
--  🆔 **MSSV**: 2180600557
 -  📧 **Gmail**: tuanhung.bh2003@gmail.com
 -  🐱 **Github**: [https://github.com/Tuanhung0912](https://github.com/Tuanhung0912)
 -  🔗 **Link Workshop**: [https://tuanhung0912.github.io/](https://tuanhung0912.github.io/)
